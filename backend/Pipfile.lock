@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "da0d13c69d9324c10bdaf12e6313731b9d8b69f4cd795bcb6085357e7bf0c60f"
+            "sha256": "05692241e8381a43fa7317e4fec84ac93487e445c20d081bf7341e0b7b6e1d20"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -55,6 +55,10 @@
             ],
             "markers": "python_version ~= '3.7'",
             "version": "==5.2.0"
+        },
+        "cb-django-files": {
+            "editable": true,
+            "path": "./modules/django_files"
         },
         "certifi": {
             "hashes": [

@@ -7,7 +7,7 @@ from django.utils.text import slugify
 
 from rest_framework import serializers, exceptions
 
-from .models import FileUploaded
+from .models import FileUpload
 
 
 class Base64FileField(serializers.FileField):
@@ -31,27 +31,23 @@ class Base64FileField(serializers.FileField):
                     raise exceptions.ValidationError("Unable to decode content.")
 
                 # Generate file name:
-                token = secrets.token_urlsafe(
-                    12
-                )  # 12 characters are more than enough.
+                token = secrets.token_urlsafe(12)  # 12 characters are more than enough.
                 # Get the file name extension:
                 orig_file_name = header.split(":")[-1].strip()
                 file_name, file_extension = os.path.splitext(orig_file_name)
                 complete_file_name = "{0}_{1}{2}".format(
-                    token,
-                    slugify(file_name),
-                    file_extension
+                    token, slugify(file_name), file_extension
                 )
                 data = ContentFile(decoded_file, name=complete_file_name)
 
         return super().to_internal_value(data)
 
 
-class FileUploadedSerializer(serializers.ModelSerializer):
+class FileUploadSerializer(serializers.ModelSerializer):
     file = Base64FileField(max_length=None, required=False)
 
     class Meta:
-        model = FileUploaded
+        model = FileUpload
         fields = [
             "id",
             "title",

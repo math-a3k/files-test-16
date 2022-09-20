@@ -1,13 +1,18 @@
 from django.contrib import admin
 
-from .models import FileUploaded
+from .models import FileUpload
 
 
-class FileUploadedAdmin(admin.ModelAdmin):
+class FileUploadAdmin(admin.ModelAdmin):
     list_display = ["user", "title", "created_at", "updated_at", "size"]
-    list_select_related = ["user", ]
-    list_filter = ["user", "created_at", ]
+    list_select_related = [
+        "user",
+    ]
+    list_filter = [
+        "user",
+        "created_at",
+    ]
     search_fields = ["user", "title"]
 
 
-admin.site.register(FileUploaded, FileUploadedAdmin)
+admin.site.register(FileUpload, FileUploadAdmin)

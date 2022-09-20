@@ -1,14 +1,14 @@
 from rest_framework import authentication, permissions, viewsets
 
-from .models import FileUploaded
-from .serializers import FileUploadedSerializer
+from .models import FileUpload
+from .serializers import FileUploadSerializer
 
 
 class FileUploadedViewSet(viewsets.ModelViewSet):
-    serializer_class = FileUploadedSerializer
+    serializer_class = FileUploadSerializer
     permission_classes = [permissions.AllowAny]
     authentication_classes = (
         authentication.SessionAuthentication,
         authentication.TokenAuthentication,
     )
-    queryset = FileUploaded.objects.all()
+    queryset = FileUpload.objects.all()

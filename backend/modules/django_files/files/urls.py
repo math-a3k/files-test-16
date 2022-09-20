@@ -1,9 +1,9 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .viewsets import FileUploadedViewSet
+from .viewsets import FileUploadViewSet
 
 router = DefaultRouter()
-router.register("uploaded", FileUploadedViewSet)
+router.register("uploads", FileUploadViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),

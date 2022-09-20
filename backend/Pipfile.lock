@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "05692241e8381a43fa7317e4fec84ac93487e445c20d081bf7341e0b7b6e1d20"
+            "sha256": "da0d13c69d9324c10bdaf12e6313731b9d8b69f4cd795bcb6085357e7bf0c60f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -55,10 +55,6 @@
             ],
             "markers": "python_version ~= '3.7'",
             "version": "==5.2.0"
-        },
-        "cb-django-files": {
-            "editable": true,
-            "path": "./modules/django_files"
         },
         "certifi": {
             "hashes": [
@@ -671,11 +667,11 @@
         },
         "pipenv": {
             "hashes": [
-                "sha256:b6dfff06dea56e3bade92fc267c2da1f0807c5c7b0903eef6115fdb899c2b4b6",
-                "sha256:e02642085a160516c49df34fa939a99cea306aa04bef8a5610392aacbfb03574"
+                "sha256:473a52bdfca37d665135f388dc0aeea8b4458e719d534b72a283b92309db7978",
+                "sha256:e08a6ca060ae4d232147f4fb1e6d50b21517640399b49f57cda71cbfbac093bd"
             ],
             "index": "pypi",
-            "version": "==2022.9.8"
+            "version": "==2022.9.20"
         },
         "platformdirs": {
             "hashes": [
